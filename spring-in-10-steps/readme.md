@@ -108,7 +108,7 @@
 ```
 ---
 
-### /src/main/java/com/in28minutes/spring/basics/springin5steps/BinarySearchImpl.java
+### /src/main/java/com/in28minutes/spring/basics/springin5steps/BinarySearch.java
 
 ```java
 package com.in28minutes.spring.basics.springin5steps;
@@ -117,7 +117,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class BinarySearchImpl {
+public class BinarySearch {
 
 	@Autowired
 	private SortAlgorithm sortAlgorithm;
@@ -193,23 +193,23 @@ import org.springframework.context.ApplicationContext;
 @SpringBootApplication
 public class SpringIn5StepsApplication {
 
-	// What are the beans?
-	// What are the dependencies of a bean?
-	// Where to search for beans? => No need
+    // What are the beans?
+    // What are the dependencies of a bean?
+    // Where to search for beans? => No need
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		// BinarySearchImpl binarySearch =
-		// new BinarySearchImpl(new QuickSortAlgorithm());
-		// Application Context
-		ApplicationContext applicationContext = 
-				SpringApplication.run(SpringIn5StepsApplication.class, args);
-		BinarySearchImpl binarySearch = 
-				applicationContext.getBean(BinarySearchImpl.class);
-		int result = 
-				binarySearch.binarySearch(new int[] { 12, 4, 6 }, 3);
-		System.out.println(result);
-	}
+        // BinarySearch binarySearch =
+        // new BinarySearch(new QuickSortAlgorithm());
+        // Application Context
+        ApplicationContext applicationContext =
+                SpringApplication.run(SpringIn5StepsApplication.class, args);
+        BinarySearch binarySearch =
+                applicationContext.getBean(BinarySearch.class);
+        int result =
+                binarySearch.binarySearch(new int[]{12, 4, 6}, 3);
+        System.out.println(result);
+    }
 }
 ```
 ---
@@ -225,20 +225,20 @@ logging.level.org.springframework = debug
 
 ```
 Searching directory [/in28Minutes/git/getting-started-in-5-steps/spring-in-5-steps/target/classes/com/in28minutes/spring/basics/springin5steps] for files matching pattern [/in28Minutes/git/getting-started-in-5-steps/spring-in-5-steps/target/classes/com/in28minutes/spring/basics/springin5steps/**/*.class]
-Identified candidate component class: file [/in28Minutes/git/getting-started-in-5-steps/spring-in-5-steps/target/classes/com/in28minutes/spring/basics/springin5steps/BinarySearchImpl.class]
+Identified candidate component class: file [/in28Minutes/git/getting-started-in-5-steps/spring-in-5-steps/target/classes/com/in28minutes/spring/basics/springin5steps/BinarySearch.class]
 Identified candidate component class: file [/in28Minutes/git/getting-started-in-5-steps/spring-in-5-steps/target/classes/com/in28minutes/spring/basics/springin5steps/BubbleSortAlgorithm.class]
 
-Creating instance of bean 'binarySearchImpl'
+Creating instance of bean 'BinarySearch'
 Creating instance of bean 'bubbleSortAlgorithm'
 Finished creating instance of bean 'bubbleSortAlgorithm'
 
-Constuctor - Autowiring by type from bean name 'binarySearchImpl' via constructor 
+Constuctor - Autowiring by type from bean name 'BinarySearch' via constructor 
 to bean named 'bubbleSortAlgorithm'
-Setter -  Autowiring by type from bean name 'binarySearchImpl' to bean named 'bubbleSortAlgorithm'
-No Setter or Constructor - Autowiring by type from bean name 'binarySearchImpl' to bean named 'bubbleSortAlgorithm'
+Setter -  Autowiring by type from bean name 'BinarySearch' to bean named 'bubbleSortAlgorithm'
+No Setter or Constructor - Autowiring by type from bean name 'BinarySearch' to bean named 'bubbleSortAlgorithm'
 
 
-Finished creating instance of bean 'binarySearchImpl'
+Finished creating instance of bean 'BinarySearch'
 ```
 ---
 
