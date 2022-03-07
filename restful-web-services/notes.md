@@ -84,9 +84,6 @@ public org.springframework.web.servlet.ModelAndView org.springframework.boot.aut
 
 ```
 
-
-
-
 ### Example Requests
 
 #### GET http://localhost:8080/users
